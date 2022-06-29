@@ -12,18 +12,18 @@ router.post("/", (ctx, next) => {
   ctx.body = {
     message: "example route POST /example",
   };
+  ctx.status = 201;
 });
 
 router.put("/", (ctx, next) => {
   ctx.body = {
     message: "example route PUT /example",
   };
+  ctx.status = 200;
 });
 
 router.del("/", (ctx, next) => {
-  ctx.body = {
-    message: "example route DELETE /example",
-  };
+  ctx.status = 204;
 });
 
 export { router };
