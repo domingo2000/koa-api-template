@@ -1,4 +1,5 @@
 import Router from "@koa/router";
+import { router as exampleRouter } from "./routes/example";
 
 const router = new Router();
 
@@ -12,5 +13,7 @@ router.post("/", (ctx, next) => {
   const { message } = ctx.request.body;
   ctx.body = `hello: message: ${message}`;
 });
+
+router.use("/examples", exampleRouter.routes());
 
 export { router };

@@ -1,7 +1,7 @@
 import Koa from "koa";
 import koaBody from "koa-body";
 import logger from "koa-logger";
-import { router } from "./routes";
+import { router } from "./router";
 
 const PORT = process.env.PORT || 3000;
 
