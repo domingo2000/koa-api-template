@@ -13,7 +13,9 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    ".ts": ["eslint", "prettier"]
+    "*.ts": [
+      "yarn lint"
+    ]
   },
   "dependencies": {
     "@koa/cors": "^3.3.0",
