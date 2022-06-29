@@ -1,7 +1,7 @@
 import Koa from "koa";
 import koaBody from "koa-body";
 import logger from "koa-logger";
-import { router } from "./router";
+import {router} from "./router";
 
 const app = new Koa();
 
