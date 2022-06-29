@@ -8,6 +8,7 @@
     "dev": "nodemon src/index.ts",
     "build": "npx tsc",
     "test": "jest",
+    "test:coverage": "jest --coverage",
     "lint": "yarn lint:run && yarn lint:format",
     "lint:format": "yarn prettier --write .",
     "lint:run": "eslint src/**/* --ext .ts --fix",

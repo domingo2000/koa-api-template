@@ -5,7 +5,7 @@ on:
       - dev
   push:
     branches:
-      - ft-CI
+      - ft-coverage-in-CI
 
 # # Disscomment to set up some enviroment variables
 # env:
@@ -31,5 +31,9 @@ jobs:
           auto_fix: true
           eslint: true
           prettier: true
+
       - name: Test
-        run: yarn test
+        run: yarn test:coverage
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v2
