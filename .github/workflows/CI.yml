@@ -28,7 +28,7 @@ jobs:
         uses: wearerequired/lint-action@v2.0.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          auto-fix: true
+          auto_fix: true
           eslint: true
           prettier: true
       - name: Test
