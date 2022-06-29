@@ -33,7 +33,7 @@ jobs:
           prettier: true
 
       - name: Test
-        run: yarn test
+        run: yarn test:coverage
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v2
