@@ -1,13 +1,13 @@
-import Koa from "koa";
-import koaBody from "koa-body";
-import KoaLogger from "koa-logger";
-import { router } from "./routes"
+import Koa from 'koa';
+import koaBody from 'koa-body';
+import logger from 'koa-logger';
+import {router} from './routes';
 
 const PORT = process.env.PORT || 3000;
 
 const app = new Koa();
 
-app.use(KoaLogger());
+app.use(logger());
 
 // Middlewares
 app.use(koaBody({
@@ -24,5 +24,5 @@ app.use(router.allowedMethods());
 
 
 app.listen(PORT, () => {
-  console.log("App listening in port", PORT)
-})
+  console.log('App listening in port', PORT);
+});
