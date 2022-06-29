@@ -13,7 +13,7 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "**/*.{js,jsx,ts,tsx}":[
+    "**/*.{js,jsx,ts,tsx,json}": [
       "yarn prettier --write",
       "yarn eslint --fix"
     ]
