@@ -1,0 +1,35 @@
+on:
+  pull_request:
+    branches:
+      - main
+      - dev
+  push:
+    branches:
+      - ft-CI
+
+
+# # Disscomment to set up some enviroment variables
+# env:
+#   DB_USERNAME: root
+#   DB_PASSWORD: some-password
+#   DB_NAME: some-name
+
+jobs:
+  CI:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Lint
+        uses: wearerequired/lint-action@v2.0.0
+        with:
+          auto-fix: true
+          eslint: true
+          prettier: true
+
+      - name: Test
+        run: yarn test
