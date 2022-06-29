@@ -34,6 +34,3 @@ jobs:
 
       - name: Test
         run: yarn test
-      
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v2
