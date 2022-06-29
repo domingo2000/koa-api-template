@@ -7,7 +7,6 @@ on:
     branches:
       - ft-CI
 
-
 # # Disscomment to set up some enviroment variables
 # env:
 #   DB_USERNAME: root
@@ -32,7 +31,6 @@ jobs:
           auto-fix: true
           eslint: true
           prettier: true
-      
 
       - name: Test
         run: yarn test
