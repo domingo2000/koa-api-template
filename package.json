@@ -9,7 +9,11 @@
     "build": "npx tsc",
     "lint": "yarn lint:run && yarn lint:format",
     "lint:format": "yarn prettier --write .",
-    "lint:run": "eslint src/** --fix"
+    "lint:run": "eslint src/** --fix",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    ".ts": ["eslint", "prettier"]
   },
   "dependencies": {
     "@koa/cors": "^3.3.0",
@@ -29,6 +33,8 @@
     "eslint": ">=5.16.0",
     "eslint-config-google": "^0.14.0",
     "eslint-config-prettier": "^8.5.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
     "prettier": "2.7.1",
     "typescript": "^4.7.4"
   }
