@@ -10,7 +10,7 @@ router.get("/", (ctx, next) => {
 
 router.post("/", (ctx, next) => {
   ctx.body = {
-    message: "example route POS /example",
+    message: "example route POST /example",
   };
   ctx.status = 201;
 });
