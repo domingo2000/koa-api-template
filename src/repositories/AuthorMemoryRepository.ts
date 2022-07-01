@@ -27,20 +27,14 @@ export class AuthorMemoryRepository implements IRepository<Author, number> {
     this.store.set(id, object);
   }
 
-  async update(object: Author) {
-    if (object.id) {
-      this.store.set(object.id, object);
-      return;
-    }
-    throw new Error("The Author Could Not Be Updated");
-  }
-
   async delete(object: Author) {
     if (object.id) {
       this.store.delete(object.id);
-      return;
     }
-    throw new Error("The Author Could Not Be Deleted");
+  }
+
+  async clean() {
+    this.store.clear();
   }
 
   private createNewId() {
@@ -48,3 +42,5 @@ export class AuthorMemoryRepository implements IRepository<Author, number> {
     return currentId + 1;
   }
 }
+
+export const authorMemoryRepository = new AuthorMemoryRepository(new Map());

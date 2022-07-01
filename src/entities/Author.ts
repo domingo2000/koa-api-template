@@ -1,6 +1,4 @@
-import { IAuthor } from "./IAuthor";
-
-class Author implements IAuthor {
+export class Author {
   id?: number;
   name: string;
   lastname: string;

@@ -1,5 +1,6 @@
 import Router from "@koa/router";
 import { router as exampleRouter } from "./routes/example";
+import { router as authorRouter } from "./routes/authors";
 
 const router = new Router();
 
@@ -15,5 +16,6 @@ router.post("/", (ctx, next) => {
 });
 
 router.use("/examples", exampleRouter.routes());
+router.use("/authors", authorRouter.routes());
 
 export { router };
