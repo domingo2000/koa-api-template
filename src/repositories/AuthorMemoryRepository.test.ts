@@ -1,21 +1,21 @@
-import User from "../entities/User";
-import { UserMemoryRepository } from "./UserMemoryRepository";
+import Author from "../entities/Author";
+import { AuthorMemoryRepository } from "./AuthorMemoryRepository";
 
-describe("UserMemoryRepository", () => {
-  let user1: User;
-  let user2: User;
-  let user3: User;
-  let userMemoryRepository: UserMemoryRepository;
+describe("AuthorMemoryRepository", () => {
+  let user1: Author;
+  let user2: Author;
+  let user3: Author;
+  let userMemoryRepository: AuthorMemoryRepository;
 
-  const usersStore: Map<number, User> = new Map();
+  const usersStore: Map<number, Author> = new Map();
 
   beforeAll(() => {
-    userMemoryRepository = new UserMemoryRepository(usersStore);
-    user1 = new User("naruto@konoha.com", "naruto", "uzumaki");
+    userMemoryRepository = new AuthorMemoryRepository(usersStore);
+    user1 = new Author("naruto", "uzumaki");
     user1.id = 1;
-    user2 = new User("kirito@sao.com", "kirigaya", "kazuto");
+    user2 = new Author("kirigaya", "kazuto");
     user2.id = 2;
-    user3 = new User("asuna@sao.com", "asuna", "yuuki");
+    user3 = new Author("asuna", "yuuki");
     user3.id = 3;
 
     usersStore.set(user1.id, user1);
@@ -39,7 +39,7 @@ describe("UserMemoryRepository", () => {
 
   describe("#save", () => {
     test("when user is new", async () => {
-      const user = new User("anya", "anya@familyspy.com", "forger");
+      const user = new Author("anya", "forger");
       const size = usersStore.size;
 
       expect(user.id).not.toBeDefined();

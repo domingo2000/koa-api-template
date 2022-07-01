@@ -1,6 +1,5 @@
-export interface IUser {
+export interface IAuthor {
   id?: number;
-  email: string;
   name: string;
   lastname: string;
 }
