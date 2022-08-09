@@ -35,7 +35,7 @@
     "@types/koa__router": "^8.0.11",
     "@types/node": "^18.0.0",
     "@types/supertest": "^2.0.12",
-    "@typescript-eslint/eslint-plugin": "^5.30.0",
+    "@typescript-eslint/eslint-plugin": "^5.33.0",
     "@typescript-eslint/parser": "^5.30.0",
     "eslint": ">=5.16.0",
     "eslint-config-google": "^0.14.0",
